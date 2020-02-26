@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "start": "npm run build-css && npm run watch-css",
+    "build-css": "sass src/stylesheets/styles.scss:public/css/styles.css --style compressed",
+    "watch-css": "sass --watch src/stylesheets/styles.scss:public/css/styles.css --style compressed"
+  }
+}

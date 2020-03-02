@@ -38,6 +38,18 @@ body {
 
 h2 { margin-top: 0; }
 
+[class*=btn-] { padding: 10px 30px; border-radius: 3px; border: 3px solid; color: #fff; font-weight: 600; text-align: center; }
+.btn-primary {
+  .c-orange { background-color: $dark-orange; border-color: $dark-orange; }
+  .c-green { background-color: $dark-green; border-color: $dark-green; }
+  .c-blue { background-color: $dark-blue; border-color: $dark-blue; }
+}
+.btn-secondary {
+  .c-orange { background-color: $light-orange; border-color: $light-orange; }
+  .c-green { background-color: $light-green; border-color: $light-green; }
+  .c-blue { background-color: $light-blue; border-color: $light-blue; }
+}
+
 .dcup-container {
   .dcup-display {
     position: relative;

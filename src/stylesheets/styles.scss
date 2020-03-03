@@ -12,112 +12,172 @@ $light-green: #2bb673;
   src: url('../fonts/OpenSans-Regular.ttf');
   font-weight: 400;
 }
-
 @font-face {
   font-family: 'Open-Sans';
   src: url('../fonts/OpenSans-Light.ttf');
   font-weight: 300;
 }
-
 @font-face {
   font-family: 'Open-Sans';
   src: url('../fonts/OpenSans-SemiBold.ttf');
   font-weight: 600;
 }
-
 @font-face {
   font-family: 'Open-Sans';
   src: url('../fonts/OpenSans-Bold.ttf');
   font-weight: 700;
 }
 
+*, *:before, *:after { box-sizing: border-box; }
 body {
   margin: 0;
   font-family: 'Open-Sans';
 }
 
-h2 { margin-top: 0; }
+h2, h3 { margin-top: 0; }
 
-[class*=btn-] { padding: 10px 30px; border-radius: 3px; border: 3px solid; color: #fff; font-weight: 600; text-align: center; }
+[class*=btn-] {
+  padding: 20px 35px; border-radius: 4px; border: 2px solid; color: #fff; font-weight: 600; text-align: center;
+  text-transform: uppercase; cursor: pointer; outline: none; box-shadow: none;
+}
 .btn-primary {
-  .c-orange { background-color: $dark-orange; border-color: $dark-orange; }
-  .c-green { background-color: $dark-green; border-color: $dark-green; }
-  .c-blue { background-color: $dark-blue; border-color: $dark-blue; }
+  &.c-orange {
+    background-color: $dark-orange; border-color: $dark-orange;
+    &:hover {
+      background-color: $light-orange; border-color: $light-orange;
+    }
+  }
+  &.c-green {
+    background-color: $dark-green; border-color: $dark-green;
+    &:hover {
+      background-color: $light-green; border-color: $light-green;
+    }
+  }
+  &.c-blue {
+    background-color: $dark-blue; border-color: $dark-blue;
+    &:hover {
+      background-color: $light-blue; border-color: $light-blue;
+    }
+  }
 }
 .btn-secondary {
-  .c-orange { background-color: $light-orange; border-color: $light-orange; }
-  .c-green { background-color: $light-green; border-color: $light-green; }
-  .c-blue { background-color: $light-blue; border-color: $light-blue; }
+  &.c-orange {
+    background-color: $light-orange; border-color: $light-orange;
+    &:hover {
+      background-color: $dark-orange; border-color: $dark-orange;
+    }
+  }
+  &.c-green {
+    background-color: $light-green; border-color: $light-green;
+    &:hover {
+      background-color: $dark-green; border-color: $dark-green;
+    }
+  }
+  &.c-blue {
+    background-color: $light-blue; border-color: $light-blue;
+    &:hover {
+      background-color: $dark-blue; border-color: $dark-blue;
+    }
+  }
+}
+.btn-outline {
+  border-color: #fff; background: none;
+
+  &:hover { background-color: #fff; color: #000; }
+}
+.btn-text {
+  background: none; border: none;
+
+  &:hover { opacity: .8 }
 }
 
-.dcup-container {
-  .dcup-display {
-    position: relative;
-    height: 300px;
-    background-image: url('../images/torre-belem.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: bottom;
+.menu-container {
+  position: fixed; top: 0;
+  width: 100%; z-index: 10000;
+  background-color: rgba(0,0,0,0.5);
+  padding: 10px 30px;
+  display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between;
 
-    img {
+  [class*=btn-] { padding: 10px; }
+  > * { flex-basis: auto; flex-grow: 0; flex-shrink: 0; }
+
+  .lang-container .lang-toggle {
+    &:not(:hover) { opacity: 0.5; }
+    &.selected { opacity: 1; }
+  }
+}
+
+.dcup-display {
+
+  img.background-img {
+    width: 100%; display: block; margin-bottom: -300px;
+  }
+
+  .shape-scaffold {
+    position: relative;
+    height: 300px; width: 100%; display: flex;
+
+    img.logo-img {
       position: absolute; left: 50%; bottom: 20px; transform: translateX(-50%); width: 200px; height: 200px;
     }
 
-    .shape-scaffold {
-      height: 100%; width: 100%; display: flex;
+    .shape-left, .shape-right {
+      overflow: hidden; flex-basis: 50%; height: 100%; position: relative;
 
-      > * {
-        overflow: hidden; flex-basis: 50%; height: 100%; position: relative;
-
-        &:before {
-          content: ''; display: inline-block;
-          position: absolute; top: 100%;
-          width: 100%; height: 50%;
-          background-color: $light-blue;
-        }
-      }
-      .shape-left:before {
-        transform-origin: top left; transform: rotate(-15deg) scale(1.5); left: 0;
-
-        @media screen and (min-width: $break-desktop) { transform: rotate(-10deg) scale(1.5); }
-      }
-      .shape-right:before {
-        transform-origin: top right; transform: rotate(15deg) scale(1.5); right: 0;
-
-        @media screen and (min-width: $break-desktop) { transform: rotate(10deg) scale(1.5); }
+      &:before {
+        content: ''; display: inline-block;
+        position: absolute; top: 100%;
+        width: 100%; height: 50%;
+        background-color: $light-blue;
       }
     }
+    .shape-left:before {
+      transform-origin: top left; transform: rotate(-15deg) scale(1.5); left: 0;
+
+      @media screen and (min-width: $break-desktop) { transform: rotate(-10deg) scale(1.5); }
+    }
+    .shape-right:before {
+      transform-origin: top right; transform: rotate(15deg) scale(1.5); right: 0;
+
+      @media screen and (min-width: $break-desktop) { transform: rotate(10deg) scale(1.5); }
+    }
+  }
+}
+
+.dcup-main-text {
+  text-transform: uppercase; color: #fff; text-align: center;
+  background-image: linear-gradient($light-blue, $dark-blue);
+  padding: 30px 20px;
+
+  .text-container {
+    margin-bottom: 50px;
   }
 
-  .dcup-main-text {
-    text-transform: uppercase;
-    color: #fff; text-shadow: 2px 2px 0 #000;
-    text-align: center;
-    background-image: linear-gradient($light-blue, $dark-blue);
-    padding: 30px 20px;
+  h2 { font-size: 3rem;  text-shadow: 4px 4px 0 #000; margin-bottom: .3em; }
+  h3 { font-size: 2rem;  text-shadow: 3px 3px 0 #000; margin-bottom: .5em; }
+}
+
+.dcup-half-text {
+  display: flex; flex-direction: column; padding: 10px 0;
+
+  @media screen and (min-width: $break-desktop) { flex-direction: row; flex-wrap: nowrap; }
+
+  > * {
+    flex-basis: 100%;
+
+    @media screen and (min-width: $break-desktop) { flex-basis: 50%; }
   }
 
-  .dcup-half-text {
-    display: flex; flex-direction: column; padding: 10px 0;
+  .text-container .text-wrapper {
+    padding: 20px; flex-basis: 100%;
 
-    @media screen and (min-width: $break-desktop) { flex-direction: row; }
-
-    > * {
-      flex-basis: 100%;
-
-      @media screen and (min-width: $break-desktop) { flex-basis: 50%; }
-    }
-
-    .text-container .text-wrapper {
-      padding: 20px; flex-basis: 100%;
-
-      @media screen and (min-width: $break-desktop) { padding: 50px; }
-    }
-    .text-container, .image-container {
-      display: flex; flex-direction: row; align-items: center; justify-content: center;
-    }
-
-    .image-container img { display: block; }
+    @media screen and (min-width: $break-desktop) { padding: 50px; }
   }
+  .text-container, .image-container {
+    display: flex; flex-direction: row; align-items: center; justify-content: center; flex-basis: 50%; flex-grow: 1; flex-shrink: 0;
+
+    @media screen and (min-width: $break-desktop) { flex-basis: 25%; }
+  }
+
+  .image-container img { display: block; max-width: 100%; }
 }

@@ -24,10 +24,10 @@
     <div class="shape-scaffold">
       <div class="shape-left"></div>
       <div class="shape-right"></div>
-      <img class="logo-img" src="./images/diamond_lisbon_2020.png" alt="">
+      <img class="logo-img" src="./images/diamond_lisbon_2020_no_shadow.svg" alt="">
     </div>
   </div>
-  <div class="dcup-main-text">
+  <div class="dcup-main-text bg-blue-1">
     <div class="text-container">
       <h2>IFBB Diamond Cup Lisbon 2020</h2>
       <h3 data-trans='mainText.date'></h3>
@@ -35,10 +35,13 @@
     </div>
     <button class="btn-primary c-orange" type="button" name="button" data-trans='btn.registry'></button>
   </div>
-  <div class="dcup-half-text">
+  <div class="timer-container bg-orange-1">
+    <h2 class="timer" data-target-date="2-5-2020"></h2>
+  </div>
+  <div class="dcup-half-text bg-green-1">
     <div class="text-container">
       <div class="text-wrapper">
-        <h2>Text</h2>
+        <h2 data-trans="sideText.card"></h2>
       </div>
     </div>
     <div class="image-container">
@@ -48,15 +51,27 @@
     </div>
     <div class="image-container">
       <div class="image-wrapper">
-        <img src="./images/logo_ranking_internacional.pdf" alt="">
+        <img src="./images/logo_ranking_internacional.svg" alt="">
       </div>
     </div>
     <div class="text-container">
       <div class="text-wrapper">
-        <h2>Text</h2>
+        <h2 data-trans="sideText.ranking"></h2>
       </div>
     </div>
   </div>
-  <div class="timer" data-target-date="2-5-2020"></div>
+  <div class="dcup-half-text map-container bg-orange-1">
+    <div class="image-container">
+      <div class="image-wrapper">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d6223.780706348285!2d-9.144843832884957!3d38.74327827710918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shotel!5e0!3m2!1sen!2spt!4v1583280208753!5m2!1sen!2spt" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+    </div>
+    <div class="text-container">
+      <div class="text-wrapper">
+        <h2 data-trans="sideText.hotelTitle"></h2>
+        <h3 data-trans="sideText.hotelText"></h3>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

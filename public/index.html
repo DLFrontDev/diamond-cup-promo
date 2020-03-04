@@ -12,7 +12,10 @@
 <body>
   <nav class="menu-container">
     <div class="nav-container">
-
+      <a href="#anchor-location" class="btn-text" data-trans="menu.location"></a>
+      <a href="#anchor-hotel" class="btn-text" data-trans="menu.hotel"></a>
+      <a href="#anchor-tan" class="btn-text" data-trans="menu.tan"></a>
+      <a href="#anchor-food" class="btn-text" data-trans="menu.food"></a>
     </div>
     <div class="lang-container">
       <button class="lang-toggle btn-text" data-lang="en" type="button" name="button">EN</button>
@@ -41,7 +44,7 @@
   <div class="dcup-half-text bg-green-1">
     <div class="text-container">
       <div class="text-wrapper">
-        <h2 data-trans="sideText.card"></h2>
+        <h3 data-trans="sideText.card"></h3>
       </div>
     </div>
     <div class="image-container">
@@ -56,11 +59,24 @@
     </div>
     <div class="text-container">
       <div class="text-wrapper">
-        <h2 data-trans="sideText.ranking"></h2>
+        <h3 data-trans="sideText.ranking"></h3>
       </div>
     </div>
   </div>
-  <div class="dcup-half-text map-container bg-orange-1">
+  <div id="anchor-location" class="dcup-half-text map-container bg-blue-1">
+    <div class="text-container">
+      <div class="text-wrapper">
+        <h2 data-trans="sideText.locationTitle"></h2>
+        <p data-trans="sideText.locationText"></p>
+      </div>
+    </div>
+    <div class="image-container">
+      <div class="image-wrapper">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.8757623947636!2d-9.140267984795667!3d38.74361307959463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1933a595c37b05%3A0x9db9052550fcc579!2sF%C3%B3rum%20Lisboa!5e0!3m2!1sen!2spt!4v1583334644224!5m2!1sen!2spt" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+    </div>
+  </div>
+  <div id="anchor-hotel" class="dcup-half-text map-container bg-orange-1">
     <div class="image-container">
       <div class="image-wrapper">
         <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d6223.780706348285!2d-9.144843832884957!3d38.74327827710918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1shotel!5e0!3m2!1sen!2spt!4v1583280208753!5m2!1sen!2spt" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
@@ -69,7 +85,31 @@
     <div class="text-container">
       <div class="text-wrapper">
         <h2 data-trans="sideText.hotelTitle"></h2>
-        <h3 data-trans="sideText.hotelText"></h3>
+        <p data-trans="sideText.hotelText"></p>
+      </div>
+    </div>
+  </div>
+  <div class="dcup-half-text bg-green-1">
+    <div id="anchor-tan" class="text-container">
+      <div class="text-wrapper">
+        <h2 data-trans="sideText.tanTitle"></h2>
+        <p data-trans="sideText.tanText"></p>
+      </div>
+    </div>
+    <div class="image-container">
+      <div class="image-wrapper">
+        <img src="https://picsum.photos/200" alt="">
+      </div>
+    </div>
+    <div id="anchor-food" class="image-container">
+      <div class="image-wrapper">
+        <img src="https://picsum.photos/300/200" alt="">
+      </div>
+    </div>
+    <div class="text-container">
+      <div class="text-wrapper">
+        <h2 data-trans="sideText.foodTitle"></h2>
+        <p data-trans="sideText.foodText"></p>
       </div>
     </div>
   </div>

@@ -179,7 +179,8 @@ h2, h3 { margin-top: 0; }
 
     @media screen and (min-width: $break-desktop) { padding: 50px; }
     h2 { font-size: 2rem; text-transform: uppercase; text-shadow: 3px 3px 0 #000; }
-    h3 { font-size: 1.7rem; text-shadow: 2px 2px 0 #000;  }
+    h3 { font-size: 1.8rem; text-transform: uppercase; text-shadow: 2px 2px 0 #000; }
+    p { font-size: 1.7rem; text-shadow: 1px 1px 0 #000; font-weight: 400; }
   }
   .text-container, .image-container {
     display: flex; flex-direction: row; align-items: center; justify-content: center; flex-basis: 50%; flex-grow: 1; flex-shrink: 0;

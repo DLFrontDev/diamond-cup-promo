@@ -34,7 +34,7 @@ body {
   font-family: 'Open-Sans';
 }
 
-h2, h3 { margin-top: 0; }
+h2, h3, h4, h5, h6, p { margin-top: 0; color: #fff; font-family: 'Open-Sans'; }
 
 [class*=btn-] {
   padding: 20px 35px; border-radius: 4px; font-size: 1.1rem; border: 2px solid; color: #fff; font-weight: 600; text-align: center;
